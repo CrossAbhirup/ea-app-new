@@ -1,0 +1,27 @@
+<div style="background-color: lavender;">
+<div class="container text-center">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="search-hero">
+        <!-- <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Search any EA product"> -->
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search any EA product" />
+      </div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Game Name</th>
+          <th>View Details</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let game of games | filter:searchText">
+          <td>{{game.gamesName}}</td>
+          <button (click)="detailsPage(game.id)">View Details</button>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

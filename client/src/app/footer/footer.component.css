@@ -1,0 +1,17 @@
+.navbar-brand{
+    display: flex;
+    flex-direction: row;
+    color: antiquewhite;
+  }
+.loginHeader{
+    display: flex;
+    position: absolute;
+    right: 150px;
+}
+.footer{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+}

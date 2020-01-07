@@ -1,0 +1,17 @@
+<nav class="navbar" style="background-color: darkcyan;">
+
+  <!-- logo -->
+  <div class="navbar-brand">
+    <p style="margin-right: 30px;">EA Help</p>
+    <p>Games</p>
+    <select style="margin-right: 30px;width: 400px;" name="gamedropdownval" [(ngModel)]="game" #gamedropdown="ngModel" (change) = "gameSelected(game.gamesName)">
+      <option *ngFor="let game of gamedropdownval" [ngValue]="game" [selected]>{{game.gamesName}}</option>
+    </select>
+    <p style="margin-right: 30px;">Accounts</p>
+    <p style="margin-right: 30px;">Contact Us</p>
+    <div class="loginHeader">
+      <p style="margin-right: 30px;">Login</p>
+      <p style="margin-right: 30px;">Sign Up</p>
+    </div>
+  </div>
+</nav>
